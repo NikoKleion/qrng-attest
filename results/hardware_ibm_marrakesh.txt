@@ -1,0 +1,18 @@
+Measured QRNG certification on IBM hardware
+backend ibm_marrakesh, job dablfc5e36ac739fjmmg, qubits [0, 1], 2000 shots
+
+self-calibration from |0> and |1> preparations
+  qubit 0: P(read 1 | prep 0) = 0.0050, P(read 1 | prep 1) = 0.9945
+    assignment matrix F0 = 0.9950, F1 = 0.9945
+  qubit 1: P(read 1 | prep 0) = 0.0045, P(read 1 | prep 1) = 0.9900
+    assignment matrix F0 = 0.9955, F1 = 0.9900
+
+measured output, P(1) per qubit: [0.5115 0.5135]
+
+QRNG certificate: ibm_marrakesh QRNG  [measured]
+  2000 shots x 2 qubits
+  attested min-entropy = 0.8607 bits/bit   (verdict: FLAGGED)
+  classical estimate: IID track (source passed the IID checks)
+  extractable = 3316 uniform bits at epsilon = 2^-64
+  a 256-bit key costs 444 raw bits
+  action: q1: readout error sets the attested rate (0.86 bits/bit); recalibrate the discriminator or exclude this qubit

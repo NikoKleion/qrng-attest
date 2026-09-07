@@ -1,0 +1,8 @@
+QRNG certificate: demo QRNG  [synthetic]
+  4000 shots x 3 qubits
+  attested min-entropy = 0.9077 bits/bit   (verdict: PASS)
+  classical estimate: IID track (source passed the IID checks)
+  extractable = 10766 uniform bits at epsilon = 2^-64
+  a 256-bit key costs 421 raw bits
+  action: no action required; re-attest after the next calibration cycle
+  note: synthetic quantum source: this run is simulated, not measured hardware

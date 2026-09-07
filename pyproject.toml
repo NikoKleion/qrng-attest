@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrng-attest"
+version = "0.1.0"
+description = "Entropy assessment and device attestation for quantum random number generation on Qiskit backends"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{name = "Nikolas Klein", email = "nikomaxman@gmail.com"}]
+dependencies = ["numpy>=1.24"]
+keywords = ["qiskit", "quantum", "quantum-computing", "qrng", "random-number-generation",
+            "entropy", "min-entropy", "nist-sp-800-90b", "cryptography", "randomness-extraction"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.urls]
+Homepage = "https://github.com/NikoKleion/qrng-attest"
+Issues = "https://github.com/NikoKleion/qrng-attest/issues"
+
+[project.optional-dependencies]
+qiskit = ["qiskit>=2.0"]
+runtime = ["qiskit>=2.0", "qiskit-ibm-runtime>=0.30"]
+aer = ["qiskit>=2.0", "qiskit-aer>=0.15"]
+sp80022 = ["nistrng>=1.2"]
+dev = ["pytest"]
+all = ["qiskit>=2.0", "qiskit-ibm-runtime>=0.30", "qiskit-aer>=0.15", "nistrng>=1.2", "pytest"]
+
+[project.scripts]
+qrng-attest = "qrng_attest.__main__:main"
+
+[tool.setuptools]
+packages = ["qrng_attest"]
+
+[tool.setuptools.package-data]
+qrng_attest = ["py.typed"]

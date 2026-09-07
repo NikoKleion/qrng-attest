@@ -1,0 +1,43 @@
+Known-answer validation against the NIST SP 800-90B reference vectors
+reference values are the output of NIST ea_non_iid on the same vectors
+
+rand1_short (binary), per estimator
+             estimator   this package           NIST   |difference|
+     most_common_value   0.9610588257   0.9610588257       0.00e+00
+             collision   0.6914641210   0.6914641210       4.77e-15
+                markov   0.9875961045   0.9875961045       1.11e-15
+           compression   0.6117162048   0.6117162048       0.00e+00
+               t_tuple   0.8676244308   0.8676244308       0.00e+00
+                   lrs   0.9626258038   0.9626258038       0.00e+00
+              multimcw   0.9586714134   0.9526180605       6.05e-03
+                   lag   0.9447211462   0.9433337066       1.39e-03
+              multimmc   0.9651353342   0.9616166678       3.52e-03
+                 lz78y   0.9704799929   0.9614462460       9.03e-03
+  worst non-predictor deviation 4.77e-15
+  worst predictor deviation     9.03e-03
+
+rand4_short (multi-bit, alphabet 16), shared keys
+                      quantity   this package           NIST   |difference|
+                   H_bitstring   0.8038720670   0.8038720670       0.00e+00
+                    H_original   3.5674726724   3.5674726724       4.44e-16
+           bitstring:collision   0.8981794484   0.8981794484       2.44e-15
+         bitstring:compression   0.8038720670   0.8038720670       0.00e+00
+                 bitstring:lrs   0.9329693145   0.9329693145       0.00e+00
+              bitstring:markov   0.9906168078   0.9906168078       5.55e-16
+   bitstring:most_common_value   0.9791894830   0.9791894830       0.00e+00
+             bitstring:t_tuple   0.8987772294   0.8987772294       0.00e+00
+                   literal:lrs   3.8335255222   3.8335255222       0.00e+00
+     literal:most_common_value   3.7900373902   3.7900373902       0.00e+00
+               literal:t_tuple   3.5674726724   3.5674726724       4.44e-16
+  worst deviation 2.44e-15
+
+rand8_short (multi-bit, alphabet 256), shared keys
+                      quantity   this package           NIST   |difference|
+                   H_bitstring   0.7326117181   0.7326117181       0.00e+00
+           bitstring:collision   0.8320529822   0.8320529822       7.77e-16
+         bitstring:compression   0.7326117181   0.7326117181       0.00e+00
+                 bitstring:lrs   0.9819303577   0.9819303577       0.00e+00
+              bitstring:markov   0.9977249767   0.9977249767       1.33e-15
+   bitstring:most_common_value   0.9833867847   0.9833867847       1.11e-16
+             bitstring:t_tuple   0.9107864457   0.9107864457       0.00e+00
+  worst deviation 1.33e-15
